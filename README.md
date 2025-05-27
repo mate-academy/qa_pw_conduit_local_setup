@@ -1,31 +1,39 @@
-# ![Drash Example App](logo.png)
+# Conduit Example App
 
-## How to Run
+The Conduit real world example application uses Deno, Drash, Vue, Webpack, PostgreSQL, and Docker Compose.
 
-1. x86 chips
+## How to Run the application
 
-    ```bash
-      docker compose build && docker compose up
-    ```
+### Docker Compose commands:
 
-1. Apple silicon M-chips
+- For x86 chips run:
 
-    ```bash
-      docker compose -f docker-compose.m1.yml build && docker compose -f docker-compose.m1.yml up
-    ```
+```bash
+docker compose build && docker compose up
+```
 
-Navigate to [http://localhost:1667](http://localhost:1667)
+- For Apple silicon M-chips run:
 
-## Run with `make` commands
+```bash
+docker compose -f docker-compose.m1.yml build && docker compose -f docker-compose.m1.yml up
+```
 
-Also, you can run the project with `Makefile` ([Unbuntu](https://www.unixmen.com/install-ubuntu-make-on-ubuntu-15-04/)), ([Windows](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows), for Mac available by default) commands:
+## How to open application
+
+Navigate to [http://localhost:1667](http://localhost:1667).
+
+### `Make` commands
+
+Alternativelly to above commands you can run the project with `Make` commands:
 
 ARM processors: `make build-m1`, `make m1`
 All other: `make build`, `make up`
 
-## Frontend login
+Read more about make: [Unbuntu](https://www.unixmen.com/install-ubuntu-make-on-ubuntu-15-04/), [Windows](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows).
 
-There are a total of 100 users, with each user having the same password. Say we
+## Default users information
+
+There are a total of 100 default users, with each user having the same password. Say we
 want to login as user 32:
 
 ```text
