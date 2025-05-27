@@ -1,51 +1,37 @@
-# ![Drash Example App](logo.png)
+# Conduit Example App
 
-This real world example application uses Deno, Drash, Vue, Webpack, PostgreSQL,
-and docker-compose.
+The Conduit real world example application uses Deno, Drash, Vue, Webpack, PostgreSQL, and Docker Compose.
 
-Drash codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API
+## How to Run the application
 
-## How to Run
+### Docker Compose commands:
 
-1. x86 chips
+- For x86 chips run:
 
-    ```bash
-      docker-compose build && docker-compose up
-    ```
-
-    If case of `"docker-compose" command not found`, use this command
-
-    ```bash
-      docker compose build && docker compose up
-    ```
-
-1. Apple silicon chips (M1, M2)
-
-    ```bash
-      docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
-    ```
-
-Navigate to [http://localhost:1667](http://localhost:1667)
-
-## Run with `make` commands
-
-Also, you can run the project with `Makefile` ([Unbuntu](https://www.unixmen.com/install-ubuntu-make-on-ubuntu-15-04/)), ([Windows](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows), for Mac available by default) commands:
-
-ARM processors: `make build-m1`, `make m1`
-All other: `make build`, `make up`
-
-## Frontend login
-
-There are a total of 100 users, with each user having the same password. Say we
-want to login as user 32:
-
-```text
-Username: user32
-Password: Userpass1
-Email: user32@hotmail.com
+```bash
+docker compose build && docker compose up
 ```
 
-## Built With
+- For Apple silicon chips (M1, M2) run:
+
+```bash
+docker compose -f docker-compose.m1.yml build && docker compose -f docker-compose.m1.yml up
+```
+
+### `Make` commands
+
+Alternativelly to above commands you can run the project with `Make` commands:
+
+Apple M1, M2: `make build-m1`, `make m1`
+All other: `make build`, `make up`
+
+Read more about make: [Unbuntu](https://www.unixmen.com/install-ubuntu-make-on-ubuntu-15-04/), [Windows](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows).
+
+## How to open application
+
+Navigate to [http://localhost:1667](http://localhost:1667).
+
+## The application built with
 
 - [Docker](https://www.docker.com/) - Containerisation
 - [Apache](https://httpd.apache.org/) - Acts as how Apache can be used as a
@@ -65,3 +51,5 @@ Email: user32@hotmail.com
   used to help the display of article tags as 'pills', allowing them to be
   removed and added like a shopping cart
 - [Cypress](https://cypress.io/) - Browser testing framework
+
+Drash codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
